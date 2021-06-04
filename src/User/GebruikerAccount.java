@@ -4,14 +4,14 @@ public class GebruikerAccount extends Gebruiker {
     private String gebruikersNaam;
     private String wachtwoord;
     private Integer punten;
-    private Integer gebruikerId = 0;
+    private Integer gebruikerID = 0000;
 
-    public GebruikerAccount(String naam, Integer leeftijd, String gebruikersnaam, String wachtwoord) {
+    public GebruikerAccount(String naam, Integer leeftijd, String gebruikersnaam, String wachtwoord, Integer punten, Integer gebruikerId) {
         super(naam, leeftijd);
         this.gebruikersNaam = gebruikersnaam;
         this.wachtwoord = wachtwoord;
         this.punten = 0;
-        this.gebruikerId = getGebruikerId();
+        this.gebruikerID = getGebruikerId();
     }
 
     public String getGebruikersNaam() {
@@ -39,10 +39,10 @@ public class GebruikerAccount extends Gebruiker {
     }
 
     public Integer getGebruikerId() {
-        return gebruikerId + 1;
+        return gebruikerID + 1;
     }
 
     public void setGebruikerId(Integer gebruikerId) {
-        this.gebruikerId = gebruikerId;
+        this.gebruikerID = gebruikerId;
     }
 }

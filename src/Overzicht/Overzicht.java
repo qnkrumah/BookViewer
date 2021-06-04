@@ -3,6 +3,7 @@ package Overzicht;
 import Book.Boek;
 import Book.KinderBoek;
 import Book.ThrillerBoek;
+import Book.WoordenBoek;
 
 import java.util.ArrayList;
 
@@ -10,6 +11,7 @@ public class Overzicht {
     private ArrayList<Book.Boek> boekenLijst = new ArrayList<>();
     private ArrayList<Book.ThrillerBoek> ThrillerLijst = new ArrayList<>();
     private ArrayList<Book.KinderBoek> Kinderboekenlijst = new ArrayList<>();
+    private ArrayList<Book.WoordenBoek> Woordenboeklijst = new ArrayList<>();
 
 
     public Overzicht() {
@@ -37,6 +39,14 @@ public class Overzicht {
 
     public void setThrillerLijst(ArrayList<ThrillerBoek> thrillerLijst) {
         ThrillerLijst = thrillerLijst;
+    }
+
+    public void setWoordenboeklijst(ArrayList <WoordenBoek> woordenboeklijst) {
+        Woordenboeklijst = woordenboeklijst;
+    }
+
+    public ArrayList<WoordenBoek> getWoordenboeklijst() {
+        return Woordenboeklijst;
     }
 
     @Override
