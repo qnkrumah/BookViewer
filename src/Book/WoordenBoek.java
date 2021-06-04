@@ -4,8 +4,8 @@ public class WoordenBoek extends Boek{
     private String taal;
     private Integer editie;
 
-    public WoordenBoek(String titel, String auteur, long ISBNNummer, Integer publicatieJaar, String taal, Integer editie) {
-        super(titel, auteur, ISBNNummer, publicatieJaar);
+    public WoordenBoek(String titel, String auteur, Integer ISBN, Integer publicatieJaar, String taal, Integer editie) {
+        super(titel, auteur, ISBN, publicatieJaar);
         this.taal = taal;
         this.editie = editie;
     }
