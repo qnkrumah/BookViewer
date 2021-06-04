@@ -29,5 +29,4 @@ public abstract class Gebruiker {
     public void setLeeftijd(Integer leeftijd) {
         this.leeftijd = leeftijd;
     }
-
 }
