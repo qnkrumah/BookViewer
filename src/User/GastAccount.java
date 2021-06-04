@@ -7,7 +7,6 @@ public class GastAccount extends Gebruiker {
         super(naam, leeftijd);
         this.isGuest = isGuest;
     }
-
     public Boolean getGuest() {
         return isGuest;
     }
