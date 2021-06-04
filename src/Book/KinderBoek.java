@@ -3,8 +3,8 @@ package Book;
 public class KinderBoek extends Boek {
     private String categorie;
 
-    public KinderBoek(String titel, String auteur, long ISBNNummer, Integer publicatieJaar, String categorie) {
-        super(titel, auteur, ISBNNummer, publicatieJaar);
+    public KinderBoek(String titel, String auteur, Integer ISBN, Integer publicatieJaar, String categorie) {
+        super(titel, auteur, ISBN, publicatieJaar);
         this.categorie = categorie;
     }
 

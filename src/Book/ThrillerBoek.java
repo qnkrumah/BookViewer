@@ -4,8 +4,8 @@ public class ThrillerBoek extends Boek {
     private Integer leeftijdsGrens;
 
 
-    public ThrillerBoek(String titel, String auteur, long ISBNNummer, Integer publicatieJaar, Integer leeftijdsGrens) {
-        super(titel, auteur, ISBNNummer, publicatieJaar);
+    public ThrillerBoek(String titel, String auteur, Integer ISBN, Integer publicatieJaar, Integer leeftijdsGrens) {
+        super(titel, auteur, ISBN, publicatieJaar);
         this.leeftijdsGrens = leeftijdsGrens;
 
     }
