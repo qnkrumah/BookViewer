@@ -1,20 +1,18 @@
 package Book;
 
 public class KinderBoek extends Boek {
-    private boolean stripBoek;
+    private String categorie;
 
-    public KinderBoek(String titel, String auteur, long ISBNNummer, Integer publicatieJaar, Boolean stripBoek) {
+    public KinderBoek(String titel, String auteur, long ISBNNummer, Integer publicatieJaar, String categorie) {
         super(titel, auteur, ISBNNummer, publicatieJaar);
-        this.stripBoek = stripBoek;
+        this.categorie = categorie;
     }
 
-    public boolean isStripBoek() {
-        return stripBoek;
+    public String getCategorie() {
+        return categorie;
     }
 
-    public void setStripBoek(boolean stripBoek) {
-        this.stripBoek = stripBoek;
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
     }
-
-
 }
