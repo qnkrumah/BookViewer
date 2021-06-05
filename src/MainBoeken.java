@@ -35,7 +35,7 @@ public class MainBoeken {
 
         for (int i = 0; i < lijst.getKinderboekenlijst().size(); i++) {
             System.out.println("Kinderboek Overzicht: ");
-            System.out.println("Boek: " + (i+1));
+            System.out.println("Boek: " +  "(" + (i+1) +")");
             System.out.println("");
             System.out.println("Titel: " + lijst.getKinderboekenlijst().get(i).getTitel());
             System.out.println("Auteur: " + lijst.getKinderboekenlijst().get(i).getAuteur());
@@ -47,7 +47,7 @@ public class MainBoeken {
 
         for (int i = 0; i < lijst.getThrillerLijst().size(); i++) {
             System.out.println("Thriller Overzicht: ");
-            System.out.println("Boek: " + (i+1));
+            System.out.println("Boek: " +  "(" + (i+1) +")");
             System.out.println("");
             System.out.println("Titel: " + lijst.getThrillerLijst().get(i).getTitel());
             System.out.println("Auteur: " + lijst.getThrillerLijst().get(i).getAuteur());
@@ -59,7 +59,7 @@ public class MainBoeken {
 
         for (int i = 0; i < lijst.getWoordenboeklijst().size(); i++) {
             System.out.println("Woordenboek Overzicht: ");
-            System.out.println("Boek: " + (i+1));
+            System.out.println("Boek: " +  "(" + (i+1) +")");
             System.out.println("");
             System.out.println("Titel: " + lijst.getWoordenboeklijst().get(i).getTitel());
             System.out.println("Auteur: " + lijst.getWoordenboeklijst().get(i).getAuteur());
