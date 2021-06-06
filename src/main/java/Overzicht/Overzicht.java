@@ -7,7 +7,7 @@ import Book.WoordenBoek;
 
 import java.util.ArrayList;
 
-public class Overzicht {
+public  class Overzicht  {
     private ArrayList<Book.Boek> boekenLijst = new ArrayList<>();
     private ArrayList<Book.ThrillerBoek> ThrillerLijst = new ArrayList<>();
     private ArrayList<Book.KinderBoek> Kinderboekenlijst = new ArrayList<>();
@@ -25,11 +25,11 @@ public class Overzicht {
         this.boekenLijst = boekenLijst;
     }
 
-    public ArrayList <KinderBoek> getKinderboekenlijst(){
-        return  Kinderboekenlijst;
+    public ArrayList<KinderBoek> getKinderboekenlijst() {
+        return Kinderboekenlijst;
     }
 
-    public void setKinderboekenlijst(ArrayList <KinderBoek> Kinderboekenlijst){
+    public void setKinderboekenlijst(ArrayList<KinderBoek> Kinderboekenlijst) {
         this.Kinderboekenlijst = Kinderboekenlijst;
     }
 
@@ -41,7 +41,7 @@ public class Overzicht {
         ThrillerLijst = thrillerLijst;
     }
 
-    public void setWoordenboeklijst(ArrayList <WoordenBoek> woordenboeklijst) {
+    public void setWoordenboeklijst(ArrayList<WoordenBoek> woordenboeklijst) {
         Woordenboeklijst = woordenboeklijst;
     }
 
@@ -57,3 +57,4 @@ public class Overzicht {
     }
 
 }
+

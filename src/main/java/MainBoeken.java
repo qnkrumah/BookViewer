@@ -3,12 +3,9 @@ import Book.ThrillerBoek;
 import Book.WoordenBoek;
 import Overzicht.Overzicht;
 
-
 public class MainBoeken {
 
     public static void main(String[] args) {
-
-
 
         KinderBoek Dolf = new KinderBoek("Dolfje Weerwolfje", "Paul van Loon", 123, 2002, "Cartoon");
         KinderBoek Mezelf = new KinderBoek("Hoe overleef ik mezelf", "Francine Oomen", 98765, 2005, "Prent");
@@ -26,7 +23,6 @@ public class MainBoeken {
         lijst.getThrillerLijst().add(IT);                 // Voegt Thrillerboeken toe aan het Overzicht
 
         lijst.getWoordenboeklijst().add(woordenBoek);           // Voegt Woordenboeken toe aan het Overzicht
-
 
 
 

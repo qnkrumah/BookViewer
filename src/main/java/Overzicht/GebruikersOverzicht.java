@@ -15,6 +15,7 @@ public class GebruikersOverzicht {
     public GebruikersOverzicht(){
     }
 
+
     public ArrayList<Gebruiker> getGebruikersLijst() {
         return gebruikersLijst;
     }
