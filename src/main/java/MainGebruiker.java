@@ -1,6 +1,5 @@
 import Overzicht.GebruikersOverzicht;
 import User.GastAccount;
-import User.Gebruiker;
 import User.GebruikerAccount;
 
 public class MainGebruiker {
