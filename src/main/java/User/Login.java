@@ -35,8 +35,15 @@ public class Login {
                 Scanner invoer = new Scanner(System.in);
                 String keuze = invoer.nextLine();
                 if(keuze.equals("Ja") || keuze.equals("ja")) {
-                    System.out.println("Lijst van alle gebruikers:");
-                    GebruikersOverzicht.lijstMenu();
+                    System.out.println("Voer het developer wachtwoord in:");
+                    String ww = invoer.nextLine();
+                    if(ww.equals("BookviewerTM")) {
+                        System.out.println("Lijst van alle gebruikers:");
+                        GebruikersOverzicht.lijstMenu();
+                    }
+                    else{
+                        System.out.println("Het developer wachtwoord klopt niet, start het systeem opnieuw op!");
+                    }
                 }
                 else{
                     System.out.println("Geen toegang!!");
@@ -51,11 +58,6 @@ public class Login {
 
     }
 
-
-    public static void invoercheck(String check){
-
-    }
-
     public static void openMenugebruikersaccount(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welkom bij de bookviewer");
@@ -64,7 +66,6 @@ public class Login {
         System.out.println("Maak je keuze:");
         int selectie = scanner.nextInt();
         menuSelectie(selectie);
-
     }
 
     public static void openMenuGastaccount(){
@@ -74,7 +75,6 @@ public class Login {
         System.out.println("Maak je keuze:");
         int selectie = scanner.nextInt();
         menuSelectie(selectie);
-
     }
 
     public static void openLogin(){
