@@ -10,13 +10,13 @@ public class Login {
     public static void loginScherm(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welkom.");
-        System.out.println("Type 1 voor normale login of type 2 voor gast account");
+        System.out.println("Voer (1) in om in te loggen met je gebruikersaccount, of (2) om gebruik te maken van een gast account:");
 
         int selectie = scanner.nextInt();
         if (inlogSelectie(selectie) == 1){
             openLogin();
         } else if (inlogSelectie(selectie) == 2){
-            openMenu();
+            openMenuGastaccount();
         }
     }
 
@@ -31,8 +31,16 @@ public class Login {
     public static void menuSelectie(int selectie){
         switch (selectie) {
             case 1 -> {
-                System.out.println("Lijst van alle gebruikers:");
-                GebruikersOverzicht.lijstMenu();
+                System.out.println("Ben je een developer? ");
+                Scanner invoer = new Scanner(System.in);
+                String keuze = invoer.nextLine();
+                if(keuze.equals("Ja") || keuze.equals("ja")) {
+                    System.out.println("Lijst van alle gebruikers:");
+                    GebruikersOverzicht.lijstMenu();
+                }
+                else{
+                    System.out.println("Geen toegang!!");
+                }
             }
             case 2 -> {
                 System.out.println("Lijst van de verschillende boeken:");
@@ -43,10 +51,25 @@ public class Login {
 
     }
 
-    public static void openMenu(){
+
+    public static void invoercheck(String check){
+
+    }
+
+    public static void openMenugebruikersaccount(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welkom bij de bookviewer");
         System.out.println("1) Lijst gebruikers");
+        System.out.println("2) Lijst boeken");
+        System.out.println("Maak je keuze:");
+        int selectie = scanner.nextInt();
+        menuSelectie(selectie);
+
+    }
+
+    public static void openMenuGastaccount(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welkom bij de bookviewer");
         System.out.println("2) Lijst boeken");
         System.out.println("Maak je keuze:");
         int selectie = scanner.nextInt();
@@ -70,7 +93,7 @@ public class Login {
             while(check){
                 if(userName.equals(gebruiker.getGebruikersAccountlijst().get(i).getGebruikersNaam()) && passWord.equals(gebruiker.getGebruikersAccountlijst().get(i).getWachtwoord())){
                     check = false;
-                    openMenu();
+                    openMenugebruikersaccount();
                 } else {
                     i++;
                 }
