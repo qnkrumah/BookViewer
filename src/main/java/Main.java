@@ -6,7 +6,7 @@ import User.GastAccount;
 import User.GebruikerAccount;
 import User.Login;
 
-public class MainBoeken {
+public class Main {
 
     public static void main(String[] args) {
         KinderBoek Dolf = new KinderBoek("Dolfje Weerwolfje", "Paul van Loon", 123, 2002, "Cartoon");
