@@ -31,6 +31,13 @@ public class Login {
     public static void menuSelectie(int selectie){
         switch (selectie) {
             case 1 -> {
+                System.out.println("Ik werk helaas nog niet");
+            }
+            case 2 -> {
+                System.out.println("Lijst van de verschillende boeken:");
+                Overzicht.lijstMenu();
+            }
+            case 3 -> {
                 System.out.println("Ben je een developer? ");
                 Scanner invoer = new Scanner(System.in);
                 String keuze = invoer.nextLine();
@@ -49,20 +56,16 @@ public class Login {
                     System.out.println("Geen toegang!!");
                 }
             }
-            case 2 -> {
-                System.out.println("Lijst van de verschillende boeken:");
-                Overzicht.lijstMenu();
             }
-            case 3 -> System.out.println("Optie 3");
-        }
 
-    }
+        }
 
     public static void openMenugebruikersaccount(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welkom bij de bookviewer");
-        System.out.println("1) Lijst gebruikers");
+        System.out.println("1) Boek toevoegen");
         System.out.println("2) Lijst boeken");
+        System.out.println("3) Lijst gebruikers (enkel toegankelijk voor de developers)");
         System.out.println("Maak je keuze:");
         int selectie = scanner.nextInt();
         menuSelectie(selectie);
@@ -71,6 +74,7 @@ public class Login {
     public static void openMenuGastaccount(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welkom bij de bookviewer");
+        System.out.println("1) Boek toevoegen");
         System.out.println("2) Lijst boeken");
         System.out.println("Maak je keuze:");
         int selectie = scanner.nextInt();

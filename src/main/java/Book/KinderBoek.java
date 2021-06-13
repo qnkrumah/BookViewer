@@ -1,7 +1,5 @@
 package Book;
 
-import Overzicht.Overzicht;
-
 public class KinderBoek extends Boek {
     private String categorie;
 
@@ -17,5 +15,4 @@ public class KinderBoek extends Boek {
     public void setCategorie(String categorie) {
         this.categorie = categorie;
     }
-
 }

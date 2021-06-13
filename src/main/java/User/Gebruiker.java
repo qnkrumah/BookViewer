@@ -1,13 +1,8 @@
 package User;
 
-import Book.Boek;
-
-import java.util.ArrayList;
-
 public abstract class Gebruiker {
     private String naam;
     private Integer leeftijd;
-
 
     public Gebruiker(String naam, Integer leeftijd) {
         this.naam = naam;

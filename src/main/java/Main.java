@@ -31,6 +31,5 @@ public class Main {
         gebruiker.getGebruikersAccountlijst().add(gebruiker3);
 
         Login.loginScherm();
-
     }
 }

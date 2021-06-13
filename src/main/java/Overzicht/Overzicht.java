@@ -1,6 +1,5 @@
 package Overzicht;
 
-
 import Book.KinderBoek;
 import Book.ThrillerBoek;
 import Book.WoordenBoek;
@@ -36,8 +35,6 @@ public class Overzicht  {
     }
 
     public void printkinderboekenLijst() {
-//        Overzicht lijst = new Overzicht();
-
         for (int i = 0; i < getKinderboekenlijst().size(); i++) {
             System.out.println("Kinderboek Overzicht: ");
             System.out.println("Boek: " + "(" + (i + 1) + ")");
