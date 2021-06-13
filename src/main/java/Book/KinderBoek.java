@@ -15,5 +15,4 @@ public class KinderBoek extends Boek {
     public void setCategorie(String categorie) {
         this.categorie = categorie;
     }
-
 }

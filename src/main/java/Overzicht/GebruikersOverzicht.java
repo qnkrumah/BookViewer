@@ -13,7 +13,6 @@ public class GebruikersOverzicht {
     public GebruikersOverzicht() {
     }
 
-
     public ArrayList<GastAccount> getGastaccountLijst() {
         return gastaccountLijst;
     }
@@ -68,5 +67,4 @@ public class GebruikersOverzicht {
             case 2 -> overzicht.gastAcocuntLijst();
         }
     }
-
 }

@@ -34,7 +34,6 @@ public class Overzicht  {
                 '}';
     }
 
-
     public void printkinderboekenLijst() {
         for (int i = 0; i < getKinderboekenlijst().size(); i++) {
             System.out.println("Kinderboek Overzicht: ");

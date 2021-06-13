@@ -31,16 +31,13 @@ public class Login {
     public static void menuSelectie(int selectie){
         switch (selectie) {
             case 1 -> {
-                System.out.println("Boek toevoegen aan het overzicht: ");
-
+                System.out.println("Ik werk helaas nog niet");
             }
-
             case 2 -> {
                 System.out.println("Lijst van de verschillende boeken:");
                 Overzicht.lijstMenu();
             }
             case 3 -> {
-                System.out.println("Optie 3");
                 System.out.println("Ben je een developer? ");
                 Scanner invoer = new Scanner(System.in);
                 String keuze = invoer.nextLine();
@@ -62,7 +59,6 @@ public class Login {
             }
 
         }
-
 
     public static void openMenugebruikersaccount(){
         Scanner scanner = new Scanner(System.in);
