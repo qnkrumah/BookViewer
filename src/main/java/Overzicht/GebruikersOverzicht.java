@@ -2,6 +2,8 @@ package Overzicht;
 
 import User.GastAccount;
 import User.GebruikerAccount;
+import User.Weergave;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,6 +11,7 @@ public class GebruikersOverzicht {
 
     private static ArrayList<User.GastAccount> gastaccountLijst = new ArrayList<>();
     private static ArrayList<User.GebruikerAccount> gebruikersAccountlijst = new ArrayList<>();
+    Weergave weergave = new Weergave();
 
     public GebruikersOverzicht() {
     }
@@ -29,33 +32,19 @@ public class GebruikersOverzicht {
     }
 
     public void gebruikerAccountLijst() {
-        for (int i = 0; i < getGebruikersAccountlijst().size(); i++) {
-            System.out.println("Gebruikersaccount " + "(" + (i + 1) + ")");
-            System.out.println("Accountgegevens: ");
-            System.out.println("Naam: " + getGebruikersAccountlijst().get(i).getNaam());
-            System.out.println("Leeftijd: " + getGebruikersAccountlijst().get(i).getLeeftijd());
-            System.out.println("Gebruikersnaam: " + getGebruikersAccountlijst().get(i).getGebruikersNaam());
-            System.out.println("Wachtwoord: " + getGebruikersAccountlijst().get(i).getWachtwoord());
-            System.out.println("Punten: " + getGebruikersAccountlijst().get(i).getPunten());
-            System.out.println("GebruikersID: " + getGebruikersAccountlijst().get(i).getGebruikerId());
-            System.out.println("");
-        }
+        GebruikerAccount gebruikerAccount = new GebruikerAccount("",0,"","");
+        weergave.oproepGebruiker(gebruikerAccount);
     }
 
     public void gastAcocuntLijst() {
-        for (int i = 0; i < getGastaccountLijst().size(); i++) {
-            System.out.println("Gastaccount " + "(" + (i + 1) + ")");
-            System.out.println("Basisgegevens informatie: ");
-            System.out.println("Naam: " + getGastaccountLijst().get(i).getNaam());
-            System.out.println("Leeftijd: " + getGastaccountLijst().get(i).getLeeftijd());
-            System.out.println("Gast true/false: " + getGastaccountLijst().get(i).getGuest());
-        }
+        GastAccount gastAccount = new GastAccount("",0,true);
+        weergave.oproepGebruiker(gastAccount);
     }
 
     public static void lijstMenu() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1) voor lijst met gebruikerAccounts:");
-        System.out.println("2) voor lijst met gastAccounts:");
+        System.out.println("1) Lijst met alle gebruikersaccounts in Bookviewer:");
+        System.out.println("2) Lijst met alle gastaccounts in Bookviewer:");
         int selectie = scanner.nextInt();
         lijstSelectie(selectie);
     }

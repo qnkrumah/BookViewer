@@ -44,4 +44,8 @@ public abstract class Boek {
     public void setPublicatieJaar(Integer publicatieJaar) {
         this.publicatieJaar = publicatieJaar;
     }
+
+    public abstract void printweergave();
+
 }
+
