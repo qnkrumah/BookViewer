@@ -1,17 +1,15 @@
 package User;
 
+import Overzicht.GebruikersOverzicht;
+
 public class GebruikerAccount extends Gebruiker {
     private String gebruikersNaam;
     private String wachtwoord;
-    private Integer punten;
-    private Integer gebruikerID = 0000;
 
-    public GebruikerAccount(String naam, Integer leeftijd, String gebruikersnaam, String wachtwoord, Integer punten, Integer gebruikerId) {
+    public GebruikerAccount(String naam, Integer leeftijd, String gebruikersnaam, String wachtwoord) {
         super(naam, leeftijd);
         this.gebruikersNaam = gebruikersnaam;
         this.wachtwoord = wachtwoord;
-        this.punten = 0;
-        this.gebruikerID = getGebruikerId();
     }
 
     public String getGebruikersNaam() {
@@ -30,19 +28,17 @@ public class GebruikerAccount extends Gebruiker {
         this.wachtwoord = wachtwoord;
     }
 
-    public Integer getPunten() {
-        return punten;
-    }
-
-    public void setPunten(Integer punten) {
-        this.punten = punten;
-    }
-
-    public Integer getGebruikerId() {
-        return gebruikerID + 1;
-    }
-
-    public void setGebruikerId(Integer gebruikerId) {
-        this.gebruikerID = gebruikerId;
+    @Override
+    public void printLijst() {
+        GebruikersOverzicht GE = new GebruikersOverzicht();
+        for (int i = 0; i < GE.getGebruikersAccountlijst().size(); i++) {
+            System.out.println("Gebruikersaccount " + "(" + (i + 1) + ")");
+            System.out.println("Accountgegevens: ");
+            System.out.println("Naam: " + GE.getGebruikersAccountlijst().get(i).getNaam());
+            System.out.println("Leeftijd: " + GE.getGebruikersAccountlijst().get(i).getLeeftijd());
+            System.out.println("Gebruikersnaam: " + GE.getGebruikersAccountlijst().get(i).getGebruikersNaam());
+            System.out.println("Wachtwoord: " + GE.getGebruikersAccountlijst().get(i).getWachtwoord());
+            System.out.println("");
+        }
     }
 }

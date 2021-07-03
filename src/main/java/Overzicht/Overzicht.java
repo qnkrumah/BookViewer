@@ -1,8 +1,11 @@
 package Overzicht;
 
+import Book.Boek;
 import Book.KinderBoek;
 import Book.ThrillerBoek;
 import Book.WoordenBoek;
+import User.Weergave;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,6 +14,7 @@ public class Overzicht  {
     private static ArrayList<Book.ThrillerBoek> ThrillerLijst = new ArrayList<>();
     private static ArrayList<Book.KinderBoek> Kinderboekenlijst = new ArrayList<>();
     private static ArrayList<Book.WoordenBoek> Woordenboeklijst = new ArrayList<>();
+    Weergave weergave = new Weergave();
 
     public Overzicht() {
     }
@@ -35,45 +39,18 @@ public class Overzicht  {
     }
 
     public void printkinderboekenLijst() {
-        for (int i = 0; i < getKinderboekenlijst().size(); i++) {
-            System.out.println("Kinderboek Overzicht: ");
-            System.out.println("Boek: " + "(" + (i + 1) + ")");
-            System.out.println("");
-            System.out.println("Titel: " + getKinderboekenlijst().get(i).getTitel());
-            System.out.println("Auteur: " + getKinderboekenlijst().get(i).getAuteur());
-            System.out.println("ISBN Nummer: " + getKinderboekenlijst().get(i).getISBN());
-            System.out.println("Publicatie Jaar: " + getKinderboekenlijst().get(i).getPublicatieJaar());
-            System.out.println("Categorie: " + getKinderboekenlijst().get(i).getCategorie());
-            System.out.println("");
-        }
+        Boek kinderBoek = new KinderBoek("","", 0,0,"");
+        weergave.oproep(kinderBoek);
     }
 
     public void printthrillerLijst() {
-        for (int i = 0; i < getThrillerLijst().size(); i++) {
-            System.out.println("Thriller Overzicht: ");
-            System.out.println("Boek: " + "(" + (i + 1) + ")");
-            System.out.println("");
-            System.out.println("Titel: " + getThrillerLijst().get(i).getTitel());
-            System.out.println("Auteur: " + getThrillerLijst().get(i).getAuteur());
-            System.out.println("ISBN Nummer: " + getThrillerLijst().get(i).getISBN());
-            System.out.println("Publicatie Jaar: " + getThrillerLijst().get(i).getPublicatieJaar());
-            System.out.println("Leeftijdsgrens: " + getThrillerLijst().get(i).getLeeftijdsGrens());
-            System.out.println("");
-        }
+        Boek thrillerBoek = new ThrillerBoek("","", 0,0,0);
+        weergave.oproep(thrillerBoek);
     }
 
     public void printwoordenboeklijst() {
-        for (int i = 0; i < getWoordenboeklijst().size(); i++) {
-            System.out.println("Woordenboek Overzicht: ");
-            System.out.println("Boek: " + "(" + (i + 1) + ")");
-            System.out.println("");
-            System.out.println("Titel: " + getWoordenboeklijst().get(i).getTitel());
-            System.out.println("Auteur: " + getWoordenboeklijst().get(i).getAuteur());
-            System.out.println("ISBN Nummer: " + getWoordenboeklijst().get(i).getISBN());
-            System.out.println("Publicatie Jaar: " + getWoordenboeklijst().get(i).getPublicatieJaar());
-            System.out.println("Taal: " + getWoordenboeklijst().get(i).getTaal());
-            System.out.println("Editie: " + getWoordenboeklijst().get(i).getEditie());
-        }
+        Boek woordenBoek = new WoordenBoek("","", 0,0,"",0);
+        weergave.oproep(woordenBoek);
     }
 
     public static void lijstMenu(){
@@ -100,5 +77,4 @@ public class Overzicht  {
         }
 
     }
-
 }

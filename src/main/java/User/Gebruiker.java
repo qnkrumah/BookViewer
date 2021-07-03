@@ -24,4 +24,6 @@ public abstract class Gebruiker {
     public void setLeeftijd(Integer leeftijd) {
         this.leeftijd = leeftijd;
     }
+
+    public abstract void printLijst();
 }
