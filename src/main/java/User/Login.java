@@ -5,6 +5,9 @@ import Overzicht.Overzicht;
 import java.util.Scanner;
 
 public class Login {
+    private static Login singleton;
+    private static Login login;
+
 
     public static void loginScherm() {
         Scanner scanner = new Scanner(System.in);
@@ -13,11 +16,18 @@ public class Login {
 
         int selectie = scanner.nextInt();
         if (selectie == 1) {
-            openLogin();
+           openLogin();
         } else if (selectie == 2) {
             openMenuGastaccount();
         }
     }
+        public static Login getInstance() {
+            if (singleton == null) {
+                singleton = new Login();
+            }
+            return singleton;
+        }
+
 
     public static void openLogin() {
         Scanner scanner = new Scanner(System.in);
@@ -33,6 +43,7 @@ public class Login {
         boolean check = true;
         for (int i = 0; i < gebruiker.getGebruikersAccountlijst().size(); i++) {
             while(check){
+                login = Login.getInstance();
                 if(userName.equals(gebruiker.getGebruikersAccountlijst().get(i).getGebruikersNaam()) && passWord.equals(gebruiker.getGebruikersAccountlijst().get(i).getWachtwoord())){
                     check = false;
                     openMenugebruikersaccount();
