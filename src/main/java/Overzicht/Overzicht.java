@@ -4,8 +4,6 @@ import Book.Boek;
 import Book.KinderBoek;
 import Book.ThrillerBoek;
 import Book.WoordenBoek;
-import User.Weergave;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

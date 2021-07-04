@@ -2,8 +2,6 @@ package Overzicht;
 
 import User.GastAccount;
 import User.GebruikerAccount;
-import User.Weergave;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
